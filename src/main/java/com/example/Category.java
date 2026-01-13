@@ -15,7 +15,7 @@ public class Category {
     private String name;
 
     @OneToMany(mappedBy = "category")
-    private List<Item> categories = new ArrayList<>();
+    private List<CategoryItem> categories = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -33,11 +33,11 @@ public class Category {
         this.name = name;
     }
 
-    public List<Item> getCategories() {
+    public List<CategoryItem> getCategories() {
         return categories;
     }
 
-    public void setCategories(List<Item> categories) {
+    public void setCategories(List<CategoryItem> categories) {
         this.categories = categories;
     }
 }

@@ -19,7 +19,7 @@ public class Item {
 
 
     @OneToMany(mappedBy = "item")
-    private List<Item> items = new ArrayList<>();
+    private List<CategoryItem> items = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -53,11 +53,11 @@ public class Item {
         this.stockQuantity = stockQuantity;
     }
 
-    public List<Item> getItems() {
+    public List<CategoryItem> getItems() {
         return items;
     }
 
-    public void setItems(List<Item> items) {
+    public void setItems(List<CategoryItem> items) {
         this.items = items;
     }
 }
