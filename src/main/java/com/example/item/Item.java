@@ -21,7 +21,7 @@ public abstract class Item {
     private int stockQuantity;
 
 
-    @OneToMany(mappedBy = "item")
+    @OneToMany(mappedBy = "item", cascade = CascadeType.ALL)
     private List<CategoryItem> items = new ArrayList<>();
 
     public Long getId() {

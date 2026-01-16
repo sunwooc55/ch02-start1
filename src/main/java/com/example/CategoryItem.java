@@ -10,11 +10,11 @@ public class CategoryItem {
     @GeneratedValue
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATEGORY_ID")
     private Category category;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ITEM_ID")
     private Item item;
 
